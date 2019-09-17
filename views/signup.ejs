@@ -1,0 +1,44 @@
+<%- include partials/head %>
+<div class="container">
+<div class="card bg-light">
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h4 class="card-title mt-3 text-center">Create Account</h4>
+           <% if (message.length > 0) { %>
+                                        <div class="alert alert-success col-sm-12"><%= message %></div>
+                            <% } %>
+<form class="form-horizontal"  method="post" action="/signup" >
+                            
+                <!--  Email -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                        </div>
+                    <input id="" type="text" class="form-control" name="email" value="" placeholder="email" required>                                       
+            </div>
+            
+                <!-- password 1 -->    
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    </div>
+                            <input id="handle" type="text" class="form-control" name="username" placeholder="username" required>
+                </div>
+
+                <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+                    </div> <!-- form-group// -->      
+                    <p class="text-center">Have an account? <a href="/login">Log In</a> </p>  
+            
+        </form>
+    </article>
+</div> <!-- card.// -->
+
+</div> 
+<!--container end.//-->
+                
+ <br><br><br><br><br><br> <br><br>
+ 
+</body>
+</html>
+
+<%- include partials/foot %>
